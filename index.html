@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tunahan Etlik | Cyber Security Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background: #000; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        .bg-lines {
+            background-image:
+                linear-gradient(rgba(249, 115, 22, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(249, 115, 22, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .orange-glow { color: #f97316; text-shadow: 0 0 20px rgba(249, 115, 22, 0.5); }
+
+        .avatar-container {
+            width: 320px; height: 320px; border-radius: 50%; overflow: hidden;
+            border: 8px solid white; background: #f97316; box-shadow: 0 0 40px rgba(249, 115, 22, 0.4);
+        }
+
+        .avatar-container img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+
+        .nav-link { transition: 0.3s; }
+        .nav-link:hover { color: #f97316; }
+
+        .btn-primary {
+            background: #f97316; color: black; padding: 14px 28px;
+            border-radius: 10px; font-weight: 700; transition: 0.3s;
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
+
+        .btn-secondary {
+            border: 1px solid #f97316; color: #f97316; padding: 14px 28px;
+            border-radius: 10px; font-weight: 700; transition: 0.3s;
+        }
+        .btn-secondary:hover { background: #f97316; color: black; }
+
+        .social-icon {
+            width: 65px; height: 65px; border-radius: 50%; border: 1px solid #333;
+            display: flex; align-items: center; justify-content: center;
+            transition: 0.3s; font-size: 28px;
+        }
+        .social-icon:hover { border-color: #f97316; color: #f97316; transform: translateY(-5px); box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+
+        body::before, body::after {
+            content: ""; position: fixed; top: 0; width: 3px; height: 100vh; z-index: 9999;
+            pointer-events: none; background: linear-gradient(to bottom, transparent, #f97316, transparent);
+            background-size: 100% 200%; animation: moveLines 3s linear infinite;
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.9);
+        }
+        body::before { left: 0; }
+        body::after { right: 0; }
+
+        @keyframes moveLines {
+            0% { background-position: 0% -200%; }
+            100% { background-position: 0% 200%; }
+        }
+
+        .cert-card {
+            background: rgba(17, 24, 39, 0.5);
+            border: 1px solid #1f2937;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+        .cert-card:hover {
+            border-color: #f97316;
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+
+<body class="bg-lines">
+
+    <!-- NAVBAR -->
+    <nav class="w-full border-b border-gray-800 sticky top-0 bg-black/80 backdrop-blur-md z-[50]">
+        <div class="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
+            <div class="flex flex-col">
+                <div class="text-2xl font-bold tracking-tight text-orange-500">TUNAHAN ETLİK</div>
+                    <span class="text-gray-500 text-xs font-medium tracking-wider mt-1">COMPUTER ENGINEERING STUDENT</span>            </div>
+            <!-- text-[15px] ve font-medium ile linkleri cok az büyüttük -->
+            <div class="hidden md:flex items-center gap-10 text-[15px] font-medium text-gray-300">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">Skills</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / ABOUT -->
+    <!-- min-h-[75vh] ve py-12 ile asagı kısmı yukarı cektik -->
+    <section class="hero min-h-[75vh] max-w-7xl mx-auto px-8 flex items-center justify-between gap-16 py-12">
+        <div class="hero-text w-1/2">
+            <h2 class="text-4xl font-bold text-gray-400 mb-6">About Me</h2>
+            <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                I am a second-year Computer Engineering student at Nevşehir Hacı Bektaş Veli University. 
+                My primary focus is on Cybersecurity, specializing in network security, penetration testing, and ethical hacking to secure future digital landscapes.
+            </p>
+            <div class="flex flex-wrap gap-5">
+                <a href="#about" class="btn-secondary">My Skills →</a>
+                <a href="#contact" class="btn-primary">Contact Me!</a>
+            </div>
+        </div>
+        <div class="hero-image w-1/2 flex justify-center">
+            <div class="avatar-container">
+                <img src="fotoğraf.jpeg" alt="Tunahan Etlik">
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <!-- pt-8 ile baslıgı fotografa biraz daha yaklastırdık -->
+    <section id="about" class="max-w-7xl mx-auto px-8 pt-8 pb-24">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold text-gray-400">Skills & Tools</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-gray-900/50 border border-gray-800 p-10 rounded-[2.5rem] hover:border-orange-500/50 transition-all duration-500 group">
+                <h3 class="text-2xl font-bold text-center mb-10 text-gray-500 group-hover:text-orange-500 transition-colors">Language</h3>
+                <div class="grid grid-cols-2 gap-y-8 gap-x-4">
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-circle-check text-orange-500 mt-1"></i>
+                        <div><h4 class="font-bold text-white">SQL</h4><p class="text-xs text-gray-500">Basic</p></div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-circle-check text-orange-500 mt-1"></i>
+                        <div><h4 class="font-bold text-white">Python</h4><p class="text-xs text-gray-500">Basic</p></div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-circle-check text-orange-500 mt-1"></i>
+                        <div><h4 class="font-bold text-white">C</h4><p class="text-xs text-gray-500">Basic</p></div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-circle-check text-orange-500 mt-1"></i>
+                        <div><h4 class="font-bold text-white">Java</h4><p class="text-xs text-gray-500">Basic</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-900/50 border border-gray-800 p-10 rounded-[2.5rem] hover:border-orange-500/50 transition-all duration-500 group">
+                <h3 class="text-2xl font-bold text-center mb-10 text-gray-500 group-hover:text-orange-500 transition-colors">Technology and Tool</h3>
+                <div class="grid grid-cols-2 gap-y-8 gap-x-4">
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-circle-check text-orange-500 mt-1"></i>
+                        <div><h4 class="font-bold text-white">Nmap</h4><p class="text-xs text-gray-500">Basic</p></div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-circle-check text-orange-500 mt-1"></i>
+                        <div><h4 class="font-bold text-white">Wireshark</h4><p class="text-xs text-gray-500">Basic</p></div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-circle-check text-orange-500 mt-1"></i>
+                        <div><h4 class="font-bold text-white">Metasploit</h4><p class="text-xs text-gray-500">Basic</p></div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-circle-check text-orange-500 mt-1"></i>
+                        <div><h4 class="font-bold text-white">BurpSuite</h4><p class="text-xs text-gray-500">Basic</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificates" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold text-gray-400">Certificates</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="cert-card rounded-3xl p-6 flex flex-col items-center text-center">
+                <div class="w-full h-48 mb-6 rounded-2xl bg-gray-800 flex items-center justify-center overflow-hidden">
+                    <i class="fa-solid fa-network-wired text-5xl text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Introduction to Cybersecurity</h3>
+                <p class="text-gray-500 text-sm mb-4">Cisco Networking Academy (14.05.2026)</p>
+                <div class="text-xs px-3 py-1 bg-orange-500/10 text-orange-500 rounded-full border border-orange-500/20">ID: 0043d2c2-9091-4941-99b2-15cf1ddd477c</div>
+            </div>
+
+            <div class="cert-card rounded-3xl p-6 flex flex-col items-center text-center">
+                <div class="w-full h-48 mb-6 rounded-2xl bg-gray-800 flex items-center justify-center overflow-hidden">
+                    <i class="fa-solid fa-shield-halved text-5xl text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Introduction to Cyber Security</h3>
+                <p class="text-gray-500 text-sm mb-4">Issued by BTK Akademi (07.03.2026)</p>
+                <div class="text-xs px-3 py-1 bg-orange-500/10 text-orange-500 rounded-full border border-orange-500/20">Official BTK Certification</div>
+            </div>
+
+            <div class="cert-card rounded-3xl p-6 flex flex-col items-center text-center">
+                <div class="w-full h-48 mb-6 rounded-2xl bg-gray-800 flex items-center justify-center overflow-hidden">
+                    <i class="fa-solid fa-user-secret text-5xl text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Ethical Hacking Course</h3>
+                <p class="text-gray-500 text-sm mb-4">Udemy - Atıl Samancıoğlu (09.03.2026)</p>
+                <div class="text-xs px-3 py-1 bg-orange-500/10 text-orange-500 rounded-full border border-orange-500/20">30.5 Hours Comprehensive Training</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION (COMING SOON) -->
+   <!-- PROJECTS SECTION -->
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold text-gray-400 uppercase">Projects</h2>
+            <div class="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- Project 1: Secure Password Generator -->
+            <div class="cert-card rounded-3xl p-8 flex flex-col group">
+                <div class="flex justify-between items-start mb-6">
+                    <i class="fa-solid fa-key text-4xl text-orange-500"></i>
+                    <a href="https://github.com/relovael/Secure_password_generator" target="_blank" class="text-gray-400 group-hover:text-orange-500 transition-colors">
+                        <i class="fa-brands fa-github text-3xl"></i>
+                    </a>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">Secure Password Generator</h3>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    A security-focused tool designed to generate strong, cryptographically secure passwords. Features customizable complexity levels and character sets to enhance authentication security.
+                </p>
+                <div class="mt-auto flex gap-3">
+                    <span class="text-xs px-3 py-1 bg-gray-800 text-gray-300 rounded-full">Python</span>
+                    <span class="text-xs px-3 py-1 bg-gray-800 text-gray-300 rounded-full">Security</span>
+                </div>
+            </div>
+
+            <!-- Project 2: Automatic Port Scanning -->
+            <div class="cert-card rounded-3xl p-8 flex flex-col group">
+                <div class="flex justify-between items-start mb-6">
+                    <i class="fa-solid fa-network-wired text-4xl text-orange-500"></i>
+                    <a href="https://github.com/relovael/Automatic_port_scanning" target="_blank" class="text-gray-400 group-hover:text-orange-500 transition-colors">
+                        <i class="fa-brands fa-github text-3xl"></i>
+                    </a>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">Automatic Port Scanning</h3>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    An automated reconnaissance tool developed to identify open ports and active services on target systems. Streamlines network security audits and vulnerability assessment processes.
+                </p>
+                <div class="mt-auto flex gap-3">
+                    <span class="text-xs px-3 py-1 bg-gray-800 text-gray-300 rounded-full">Network Security</span>
+                    <span class="text-xs px-3 py-1 bg-gray-800 text-gray-300 rounded-full">Automation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="border-t border-gray-800 py-24">
+        <div class="max-w-5xl mx-auto px-8 text-center">
+            <h2 class="text-5xl font-bold mb-6 text-gray-400">Contact Me</h2>
+            <p class="text-gray-500 text-lg mb-12">Feel free to reach out for collaborations or inquiries.</p>
+            <div class="flex justify-center gap-8 flex-wrap">
+                <a href="https://instagram.com/tunahanetlik" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/tunahan-etlik/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:growtuna@gmail.com" class="social-icon"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-gray-900 py-8 text-center text-gray-600">
+        © 2026 Tunahan Etlik | Cyber Security Portfolio
+    </footer>
+
+</body>
+</html>
